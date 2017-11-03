@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Website } from '../website.model';
 import { Router } from '@angular/router';
 import { WebsiteService } from '../website.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-projects',
@@ -11,6 +12,7 @@ import { WebsiteService } from '../website.service';
 })
 
 export class ProjectsComponent implements OnInit {
+  websites: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private websiteService: WebsiteService){}
 
@@ -21,6 +23,4 @@ export class ProjectsComponent implements OnInit {
   goToDetailPage(clickedWebsite: Website) {
    this.router.navigate(['websites', clickedWebsite.id]);
   };
-
-
 }

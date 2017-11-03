@@ -1,0 +1,12 @@
+{ "websites": [{
+    "title": "PDX-EATS",
+    "technology": "Ruby, Sinatra, Postgress, HTML, CSS, Javascript",
+    "description": "A webapp where users can create accounts, write reviews, and view other user's reviews.",
+    "id": "1"
+    }, {
+    "title": "Doctor API",
+    "technology": "Nodejs, Html, API, Postman",
+    "description": "A webapp where a user could search for a doctor or problems in the params, the webapp would populate results base of the user input",
+    "id": "2"
+      }]
+}

@@ -1,7 +1,7 @@
 <h2>Projects</h2>
 
-<div *ngFor="let website of websites" (click)="goToDetailPage(website)" class="panel panel-default">
+<div *ngFor="let website of websites | async" (click)="goToDetailPage(website)" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{website.title}}</em> by {{website.artist}}</h3>
+    <h3><em>{{website.title}}</em> by {{website.technology}}</h3>
   </div>
 </div>

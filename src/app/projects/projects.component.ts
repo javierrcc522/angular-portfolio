@@ -7,14 +7,14 @@ import { Router } from '@angular/router';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-  export class ProjectsComponent {
+export class ProjectsComponent {
 
-    constructor(private router: Router){}
+  constructor(private router: Router){}
 
     websites: Website[] = [
       new Website("PDX-EATS", "Ruby, Sinatra, Postgress, HTML, CSS, Javascript", "A webapp where users can create accounts, write reviews, and view other user's reviews.", 1)
     ];
-  }
+
 
 
   goToDetailPage(clickedWebsite: Website) {
@@ -22,4 +22,4 @@ import { Router } from '@angular/router';
  };
 
 
-};
+ };

@@ -2,8 +2,9 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent }   from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component'
-import { WebsiteDetailComponent } from './website-detail/website-detail.component'
+import { ProjectsComponent } from './projects/projects.component';
+import { WebsiteDetailComponent } from './website-detail/website-detail.component';
+import { AdminComponent }   from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'websites/:id',
     component: WebsiteDetailComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 

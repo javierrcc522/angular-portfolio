@@ -24,6 +24,6 @@ export class WebsiteDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.websiteId = parseInt(urlParameters['id']);
     });
-    this.websiteToDisplay = this.WebsiteService.getWebsiteById(this.websiteId);
+    // this.websiteToDisplay = this.WebsiteService.getWebsiteById(this.websiteId);
   }
 }

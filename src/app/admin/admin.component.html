@@ -1,0 +1,21 @@
+<h3>Add New Website</h3>
+<div>
+  <div>
+    <label>Website Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Website Technology:</label>
+    <br>
+    <input #newTechnology>
+  </div>
+
+  <div>
+    <label>Website Description:</label>
+    <br>
+    <textarea #newDescription></textarea>
+  </div>
+  <button (click)="submitForm(newTitle.value, newTechnology.value, newDescription.value); newTitle.value=''; newTechnology.value=''; newDescription.value=''">Add</button>
+</div>

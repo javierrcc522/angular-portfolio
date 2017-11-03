@@ -21,6 +21,6 @@ export class ProjectsComponent implements OnInit {
   }
 
   goToDetailPage(clickedWebsite: Website) {
-   this.router.navigate(['websites', clickedWebsite.id]);
+  //  this.router.navigate(['websites', clickedWebsite.id]);
   };
 }

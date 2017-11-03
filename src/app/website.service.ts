@@ -15,12 +15,16 @@ export class WebsiteService {
     return this.websites;
   }
 
+  addWebsite(newWebsite: Website) {
+    this.websites.push(newWebsite);
+  }
+
   getWebsiteById(websiteId: number){
-    for (var i = 0; i <= WEBSITES.length - 1; i++) {
-      if (WEBSITES[i].id === websiteId) {
-        return WEBSITES[i];
-      }
-    }
+    // for (var i = 0; i <= WEBSITES.length - 1; i++) {
+    //   if (WEBSITES[i].id === websiteId) {
+    //     return WEBSITES[i];
+    //   }
+    // }
   }
 
 }

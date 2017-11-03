@@ -1,8 +1,8 @@
 <h2>Projects</h2>
 
-<div *ngFor="let website of websites | async" (click)="goToDetailPage(website)" class="panel panel-default">
+<div *ngFor="let website of websites | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{website.title}}</em> with {{website.technology}}</h3>
+    <h3 (click)="goToDetailPage(website)"><em>{{website.title}}</em> with {{website.technology}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       {{website.description}}
       <hr>

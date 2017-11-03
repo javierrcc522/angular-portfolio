@@ -19,4 +19,11 @@ export class EditWebsiteComponent implements OnInit {
     this.websiteService.updateWebsite(websiteToUpdate);
   }
 
+  beginDeletingWebsite(websiteToDelete){
+    if(confirm("Are you sure you want to delete this item from the inventory?")){
+      this.websiteService.deleteWebsite(websiteToDelete);
+    }
+  }
+
+
 }

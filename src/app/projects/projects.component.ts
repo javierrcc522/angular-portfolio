@@ -1,25 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Website } from '../website.model';
 import { Router } from '@angular/router';
+import { WebsiteService } from '../website.service';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  providers: [WebsiteService]
 })
-export class ProjectsComponent {
 
-  constructor(private router: Router){}
+export class ProjectsComponent implements OnInit {
 
-    websites: Website[] = [
-      new Website("PDX-EATS", "Ruby, Sinatra, Postgress, HTML, CSS, Javascript", "A webapp where users can create accounts, write reviews, and view other user's reviews.", 1)
-    ];
+  constructor(private router: Router, private websiteService: WebsiteService){}
 
-
+  ngOnInit(){
+    this.websites = this.websiteService.getWebsites();
+  }
 
   goToDetailPage(clickedWebsite: Website) {
    this.router.navigate(['websites', clickedWebsite.id]);
- };
+  };
 
 
- };
+}

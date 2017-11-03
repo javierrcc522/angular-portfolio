@@ -3,5 +3,10 @@
 <div *ngFor="let website of websites | async" (click)="goToDetailPage(website)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{website.title}}</em> with {{website.technology}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{website.description}}
+      <hr>
+      <app-edit-website [selectedWebsite]="website"></app-edit-website>
+    </div>
   </div>
 </div>

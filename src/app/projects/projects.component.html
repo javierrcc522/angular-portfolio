@@ -1,3 +1,7 @@
 <h2>Projects</h2>
 
-<p>All of my projects will be listed here!!</p>
+<div *ngFor="let website of websites" (click)="goToDetailPage(website)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{website.title}}</em> by {{website.artist}}</h3>
+  </div>
+</div>

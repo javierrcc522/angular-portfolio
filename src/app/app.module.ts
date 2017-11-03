@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { WebsiteDetailComponent } from './website-detail/website-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    WebsiteDetailComponent
   ],
   imports: [
     BrowserModule,

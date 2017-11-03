@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Website } from '../website.model';
 import { WebsiteService } from '../website.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-website-detail',
@@ -11,8 +12,8 @@ import { WebsiteService } from '../website.service';
   providers: [WebsiteService]
 })
 export class WebsiteDetailComponent implements OnInit {
-  websiteId: number;
-  websiteToDisplay: Website;
+  websiteId: string;
+  websiteToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,8 +23,8 @@ export class WebsiteDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.websiteId = parseInt(urlParameters['id']);
+      this.websiteId = urlParameters['id'];
     });
-    // this.websiteToDisplay = this.WebsiteService.getWebsiteById(this.websiteId);
+    this.websiteToDisplay = this.websiteService.getWebsiteById(this.websiteId);
   }
 }

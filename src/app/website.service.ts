@@ -19,12 +19,8 @@ export class WebsiteService {
     this.websites.push(newWebsite);
   }
 
-  getWebsiteById(websiteId: number){
-    // for (var i = 0; i <= WEBSITES.length - 1; i++) {
-    //   if (WEBSITES[i].id === websiteId) {
-    //     return WEBSITES[i];
-    //   }
-    // }
+  getWebsiteById(websiteId: string){
+    return this.database.object('websites/' + websiteId);
   }
 
 }

@@ -1,5 +1,5 @@
 <div>
-  <h3>{{websiteToDisplay.title}}</h3>
-  <h4>{{websiteToDisplay.technology}}</h4>
-  <p>{{websiteToDisplay.description}}</p>
+  <h3>{{(websiteToDisplay | async).title}}</h3>
+  <h4>{{(websiteToDisplay | async).technology}}</h4>
+  <p>{{(websiteToDisplay | async).description}}</p>
 </div>

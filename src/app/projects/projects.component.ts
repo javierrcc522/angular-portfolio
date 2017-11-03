@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
     this.websites = this.websiteService.getWebsites();
   }
 
-  goToDetailPage(clickedWebsite: Website) {
-  //  this.router.navigate(['websites', clickedWebsite.id]);
+  goToDetailPage(clickedWebsite) {
+    this.router.navigate(['websites', clickedWebsite.$key]);
   };
 }

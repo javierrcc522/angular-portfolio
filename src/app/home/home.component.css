@@ -1,3 +1,41 @@
 #home {
   text-align: center;
 }
+
+header {
+  background: url('https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?auto=format&fit=crop&w=1052&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.header-content {
+  text-align: center;
+  padding-top: 30vh;
+  color: black;
+}
+
+hr {
+  display: block;
+  padding: 0;
+  width: 21em;
+  height: 0;
+  max-height: 0;
+  line-height: 1;
+  margin: 0.5em auto 0.5em auto;
+  border-width: 2px;
+}
+
+.social-links a {
+  margin: 5px;
+  color: white;
+  font-size: 2em;
+}
+
+.about-section {
+  background-color: #42646E;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin-top: -20px;
+}

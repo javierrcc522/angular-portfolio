@@ -9,7 +9,7 @@
 <br>
 
 <label>New Website Description:</label>
-<input [(ngModel)]="selectedWebsite.description">
+<textarea [(ngModel)]="selectedWebsite.description"></textarea>
 
 <button (click)="beginUpdatingWebsite(selectedWebsite)">Update</button>
 <button (click)="beginDeletingWebsite(selectedWebsite)">Delete</button>

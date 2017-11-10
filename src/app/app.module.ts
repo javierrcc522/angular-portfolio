@@ -14,6 +14,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
 import { EditWebsiteComponent } from './edit-website/edit-website.component';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +32,9 @@ export const firebaseConfig = {
     ProjectsComponent,
     WebsiteDetailComponent,
     AdminComponent,
-    EditWebsiteComponent
+    EditWebsiteComponent,
+    PublicComponent,
+    PrivateComponent
   ],
   imports: [
     BrowserModule,

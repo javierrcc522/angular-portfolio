@@ -46,4 +46,3 @@ Thumbs.db
 /bower_components
 
 #Firebase credentials
-/src/app/api-keys.ts

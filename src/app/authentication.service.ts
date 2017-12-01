@@ -6,13 +6,14 @@ import * as firebase from 'firebase/app';
 @Injectable()
 export class AuthenticationService {
   user: Observable<firebase.User>;
-
+  password = "123456789";
+  email = "test1@gmail.com";
   constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
   }
 
   login() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    this.afAuth.auth.signInWithEmailAndPassword(this.email, this.password);
   }
 
   logout() {
